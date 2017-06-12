@@ -34,7 +34,7 @@ public class GuiIvVillagerHauler extends GuiContainer{
 			{
 				this.button_text = "Follow";
 			}
-        this.addButton(new Button_Follow(0, 115, 20, 40, 25, this.villager, this.button_text));
+        this.addButton(new GuiButton(0, 115, 20, 40, 20, button_text));
 
 	}
 
