@@ -55,15 +55,8 @@ public class GuiIvVillagerHireNitwit extends GuiContainer{
 	@Override
     protected void actionPerformed(GuiButton button)
     {
-		Boolean has_emeralds;
-        if (this.inventorySlots.getSlot(0).getStack().getCount() >= villager.getHireCost() && this.inventorySlots.getSlot(0).getStack().getItem().equals(Items.EMERALD)){ 
-        	has_emeralds = true;
-        }
-        else 
-        {
-        	has_emeralds = false;
-        }
-        if (has_emeralds)
+		final ItemStack stack = this.inventorySlots.getSlot(0).getStack();
+		if (stack.getCount() >= villager.getHireCost() && stack.getItem() == Items.EMERALD)
         {
         	Reference.PACKET_MODID.sendToServer(new MessageHireVillager(this.villager.getEntityId()));
         }
