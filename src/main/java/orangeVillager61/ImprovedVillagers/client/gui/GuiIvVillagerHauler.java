@@ -8,8 +8,8 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
+import orangeVillager61.ImprovedVillagers.Container.ContainerIvVillagerHauler;
 import orangeVillager61.ImprovedVillagers.Reference;
-import orangeVillager61.ImprovedVillagers.Container.ContainerIvVillagerHireNitwit;
 import orangeVillager61.ImprovedVillagers.Entities.IvVillager;
 import orangeVillager61.ImprovedVillagers.Packet.MessageChangeFollow;
 
@@ -20,8 +20,8 @@ public class GuiIvVillagerHauler extends GuiContainer{
 	private String button_text;
 	
 	public GuiIvVillagerHauler(IvVillager villager, IInventory playerInv) {
-		super(new ContainerIvVillagerHireNitwit(villager, playerInv));
-		
+		super(new ContainerIvVillagerHauler(villager, playerInv));
+
 		this.xSize = 176;
 		this.ySize = 166;
 		
