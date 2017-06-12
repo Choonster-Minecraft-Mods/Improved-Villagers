@@ -14,11 +14,11 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import orangeVillager61.ImprovedVillagers.Packet.MessageHireVillager;
 import orangeVillager61.ImprovedVillagers.Reference;
 import orangeVillager61.ImprovedVillagers.Blocks.IvBlocks;
 import orangeVillager61.ImprovedVillagers.Container.ContainerIvVillagerHireNitwit;
 import orangeVillager61.ImprovedVillagers.Entities.IvVillager;
-import orangeVillager61.ImprovedVillagers.Packet.MessageSendEntityId;
 
 public class GuiIvVillagerHireNitwit extends GuiContainer{
 
@@ -65,7 +65,7 @@ public class GuiIvVillagerHireNitwit extends GuiContainer{
         }
         if (has_emeralds)
         {
-        	Reference.PACKET_MODID.sendToServer(new MessageSendEntityId(this.villager.getEntityId()));
+        	Reference.PACKET_MODID.sendToServer(new MessageHireVillager(this.villager.getEntityId()));
         }
     }
 	

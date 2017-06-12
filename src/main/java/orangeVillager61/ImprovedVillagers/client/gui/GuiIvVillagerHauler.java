@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 import orangeVillager61.ImprovedVillagers.Reference;
 import orangeVillager61.ImprovedVillagers.Container.ContainerIvVillagerHireNitwit;
 import orangeVillager61.ImprovedVillagers.Entities.IvVillager;
-import orangeVillager61.ImprovedVillagers.Packet.MessageSendEntityId;
+import orangeVillager61.ImprovedVillagers.Packet.MessageChangeFollow;
 
 public class GuiIvVillagerHauler extends GuiContainer{
 
@@ -49,7 +49,7 @@ public class GuiIvVillagerHauler extends GuiContainer{
     {
 		if (this.villager.getHired())
 		{
-	    	Reference.PACKET_MODID.sendToServer(new MessageSendEntityId(this.villager.getEntityId()));
+	    	Reference.PACKET_MODID.sendToServer(new MessageChangeFollow(this.villager.getEntityId()));
 		}
     }
 	@Override
